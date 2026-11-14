@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Shwe Yi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #080808 !important; color: white; margin: 0; }
+        .neon-text { color: #00ffee; text-shadow: 0 0 10px #00ffee; }
+        
+        .input-field {
+            background: #131313 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+            transition: 0.3s;
+        }
+        .input-field:focus { border-color: #00ffee !important; box-shadow: 0 0 10px rgba(0, 255, 238, 0.2); }
+
+        .btn-submit {
+            background: #00ffee;
+            color: #080808;
+            font-weight: 900;
+            transition: 0.5s;
+            box-shadow: 0 0 15px #00ffee;
+        }
+        .btn-submit:hover { box-shadow: 0 0 30px #00ffee; transform: scale(1.02); }
+
+        /* စာသားနဲ့ Form ထိပ်ချင်းညီအောင် ညှိထားတာ */
+        .content-adjustment {
+            margin-top: -20px; 
+        }
+    </style>
+</head>
+<body class="bg-[#080808]">
+
+   <header class="fixed w-full py-6 px-10 md:px-20 flex justify-between items-center z-50 bg-[#080808]/90 backdrop-blur-md border-b border-white/5">
+    <a href="index.html" class="text-3xl font-black tracking-tighter group flex items-center">
+        <span class="text-white">SY</span>
+        <span class="neon-text">_Dev</span>
+        <span class="w-1 h-8 bg-[#00ffee] ml-1 animate-pulse shadow-[0_0_10px_#00ffee]"></span>
+    </a>
+
+    <nav class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-white">
+        <a href="index.html" class="neon-text">Home</a>
+        <a href="about.html" class="hover:neon-text transition">About</a>
+        <a href="skills.html" class="hover:neon-text transition">Skills</a>
+        <a href="projects.html" class="hover:neon-text transition">Projects</a>
+        <a href="contact.html" class="hover:neon-text transition">Contact</a>
+    </nav>
+</header>
+
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-start">
+        <div class="grid md:grid-cols-2 gap-16 items-start w-full">
+            
+            <div data-aos="fade-right" class="content-adjustment">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight italic uppercase">Let's <span class="neon-text">Connect_</span></h2>
+                <p class="text-gray-400 mb-10 text-lg leading-relaxed max-w-md">
+                    Have a project in mind or just want to chat about <span class="text-white font-bold">Web Security</span>? Reach out through any of these platforms.
+                </p>
+                
+                <div class="space-y-6">
+                    <a href="https://www.linkedin.com/in/shwe-yee-win-5431a4379" target="_blank" class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500 shadow-[0_0_10px_rgba(0,255,238,0.1)]">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500 shadow-[0_0_10px_rgba(0,255,238,0.1)]">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">WhatsApp</span>
+                    </a>
+
+                    <a href="https://tiktok.com/@helenairish2105" target="_blank" class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500 shadow-[0_0_10px_rgba(0,255,238,0.1)]">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#111] p-10 rounded-[2.5rem] border border-white/5 shadow-2xl" data-aos="zoom-in">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-black uppercase text-[#00ffee] mb-3">Your Name</label>
+                        <input type="text" name="name" required class="input-field w-full rounded-xl p-4 outline-none" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase text-[#00ffee] mb-3">Email Address</label>
+                        <input type="email" name="email" required class="input-field w-full rounded-xl p-4 outline-none" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase text-[#00ffee] mb-3">Message</label>
+                        <textarea name="message" rows="4" required class="input-field w-full rounded-xl p-4 outline-none" placeholder="What's on your mind?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit w-full py-4 rounded-xl uppercase font-black text-sm">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="py-10 text-center border-t border-white/5 text-gray-600 text-sm">
+        &copy; 2026 Shwe Yee. All rights reserved. <span class="neon-text">SY_Dev</span>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

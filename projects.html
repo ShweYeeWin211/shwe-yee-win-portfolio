@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Shwe Yi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #080808 !important; color: white; }
+        .neon-text { color: #00ffee; text-shadow: 0 0 10px #00ffee; }
+        
+        .project-card {
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.5s;
+            height: 100%; /* Card အမြင့်တွေကို ညီအောင်လုပ်တာ */
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            border-color: #00ffee;
+            box-shadow: 0 0 20px rgba(0, 255, 238, 0.2);
+            transform: translateY(-10px);
+        }
+        .image-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(0, 255, 238, 0.1));
+        }
+    </style>
+</head>
+<body class="bg-[#080808]">
+
+    <header class="fixed w-full py-6 px-10 md:px-20 flex justify-between items-center z-50 bg-[#080808]/90 backdrop-blur-md border-b border-white/5">
+    <a href="index.html" class="text-3xl font-black tracking-tighter group flex items-center">
+        <span class="text-white">SY</span>
+        <span class="neon-text">_Dev</span>
+        <span class="w-1 h-8 bg-[#00ffee] ml-1 animate-pulse shadow-[0_0_10px_#00ffee]"></span>
+    </a>
+
+    <nav class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-white">
+        <a href="index.html" class="neon-text">Home</a>
+        <a href="about.html" class="hover:neon-text transition">About</a>
+        <a href="skills.html" class="hover:neon-text transition">Skills</a>
+        <a href="projects.html" class="hover:neon-text transition">Projects</a>
+        <a href="contact.html" class="hover:neon-text transition">Contact</a>
+    </nav>
+</header>
+
+    <section class="pt-40 pb-20 px-10 md:px-20 max-w-7xl mx-auto">
+        <div class="mb-16 text-center" data-aos="fade-down">
+            <h2 class="text-5xl font-black uppercase italic">Latest <span class="neon-text">Projects_</span></h2>
+            <p class="text-gray-500 mt-4 tracking-widest text-xs uppercase font-bold">// Quality Over Quantity</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-university text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/university-ss.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">University Management System</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Management system for UCS Meiktila students with secure database architecture.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">PHP / MYSQL</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW CASE STUDY</a>
+                </div>
+            </div>
+
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-utensils text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/fh.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">Food Hub</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">A dynamic food delivery platform featuring real-time menu filtering and interactive cart system.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">HTML / CSS / JS</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-book text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/bookstore-ss.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">Online Library System</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 italic">Secure management solution with user authentication and book cataloging.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">PHP / MYSQL</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW CASE STUDY</a>
+                </div>
+            </div>
+
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-microphone-alt text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/digitalvoice-ss.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">Digital Voice</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Speech recognition and processing application utilizing JavaScript voice APIs.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">JS / SPEECH API</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-cloud-sun text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/weather-ss.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">Weather Forecast</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Python-based automation that fetches real-time API data for daily updates.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">PYTHON / API</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW PROJECT</a>
+                </div>
+            </div>
+
+            <div class="project-card p-3 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="500">
+                <div class="h-60 rounded-2xl overflow-hidden bg-gray-900 relative">
+                    <div class="absolute inset-0 image-overlay"></div>
+                    <i class="fas fa-user-secret text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/20 group-hover:scale-125 transition duration-500"></i>
+                    <img src="Images/secret-ss.jpg" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-2 uppercase tracking-tighter">Secret Keeper</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Encrypted password manager built with security-first mindset for CS students.</p>
+                </div>
+                <div class="px-6 pb-6 mt-auto flex justify-between items-center">
+                    <span class="text-[10px] font-black text-white/40 tracking-widest">PYTHON / AES</span>
+                    <a href="#" class="text-white text-xs font-bold border-b border-[#00ffee] pb-1 hover:text-[#00ffee] transition">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="600">
+    <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+        <img src="Images/job_portal.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500" alt="IT Portal">
+        <i class="fas fa-briefcase text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+    </div>
+    <div class="px-2 flex-grow">
+        <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">IT Portal</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            Connect with top tech companies in Myanmar. A dynamic job portal platform discovering roles that match candidate passions and skills.
+        </p>
+    </div>
+    <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+        <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PHP / MYSQL</span>
+        <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+    </div>
+</div>
+        </div> </section>
+        <footer class="py-10 text-center border-t border-white/5 text-gray-600 text-sm">
+        &copy; 2026 Shwe Yee. All rights reserved. <span class="neon-text">SY_Dev</span>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

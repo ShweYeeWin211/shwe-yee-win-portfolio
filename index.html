@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shwe Yi | Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+        
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: #080808 !important; 
+            color: white; 
+            overflow-x: hidden; 
+            font-family: 'Poppins', sans-serif; 
+        }
+
+        .neon-text { color: #00ffee; text-shadow: 0 0 10px rgba(0, 255, 238, 0.5); }
+        
+        .neon-btn {
+            display: inline-block; padding: 12px 35px; background: #00ffee; border-radius: 40px;
+            color: #080808; font-weight: bold; box-shadow: 0 0 15px #00ffee; transition: 0.3s;
+            cursor: pointer;
+        }
+        .neon-btn:hover { box-shadow: 0 0 30px #00ffee; transform: scale(1.05); }
+
+        /* Profile Image Styling */
+        .profile-img-box {
+            position: relative; 
+            width: 280px; height: 280px; 
+            border-radius: 50%;
+            border: 4px solid #00ffee; 
+            box-shadow: 0 0 25px #00ffee; 
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .profile-img-box { width: 380px; height: 380px; }
+        }
+        .profile-img-box img { 
+            width: 100%; height: 100%; 
+            object-fit: cover; /* ပုံမရှုံ့အောင် ထိန်းပေးပါတယ် */
+        }
+        
+        /* Progress Bar */
+        .progress-bar { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .progress-line { height: 100%; background: #00ffee; box-shadow: 0 0 10px #00ffee; transition: 1s ease-in-out; }
+
+        /* Skills Slider */
+        .skills-wrapper {
+            display: flex; overflow-x: auto; gap: 20px; padding: 20px 0;
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .skills-wrapper::-webkit-scrollbar { display: none; }
+        
+        .skill-card {
+            background: #111; border-radius: 1.5rem; min-width: 150px; height: 150px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            border: 1px solid rgba(255,255,255,0.05); transition: 0.4s;
+        }
+        .skill-card i { font-size: 2.8rem; color: #00ffee; margin-bottom: 12px; }
+        .skill-card:hover { border-color: #00ffee; transform: translateY(-10px); background: rgba(0, 255, 238, 0.05); }
+
+        /* Project Cards */
+        .project-card { 
+            background: #111; border: 1px solid rgba(255,255,255,0.05); 
+            border-radius: 2rem; overflow: hidden; transition: 0.5s; 
+            height: 100%;
+        }
+        .project-card:hover { border-color: #00ffee; transform: translateY(-10px); }
+
+        /* Contact Form */
+        .input-field {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            color: white; border-radius: 15px; padding: 1rem; width: 100%; transition: 0.3s;
+        }
+        .input-field:focus { border-color: #00ffee; outline: none; background: rgba(255,255,255,0.07); box-shadow: 0 0 15px rgba(0, 255, 238, 0.1); }
+    </style>
+</head>
+<body>
+    <header class="fixed w-full py-5 px-6 md:px-20 flex justify-between items-center z-50 bg-[#080808]/90 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="text-2xl font-black tracking-tighter">
+            <span class="text-white">SY</span><span class="neon-text">_Dev</span>
+        </a>
+        <nav class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
+            <a href="index.html#home" class="neon-text">Home</a>
+            <a href="about.html" class="hover:neon-text transition text-white">About</a>
+            <a href="skills.html" class="hover:neon-text transition text-white">Skills</a>
+            <a href="projects.html" class="hover:neon-text transition text-white">Projects</a>
+            <a href="contact.html" class="hover:neon-text transition text-white">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="min-h-screen pt-20 px-6 md:px-20 flex items-center">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full gap-12">
+            <div class="w-full md:w-3/5" data-aos="fade-right">
+                <h3 class="text-xl md:text-2xl font-bold">Hello, It's Me</h3>
+                <h1 class="text-5xl md:text-8xl font-black my-4 leading-tight">Shwe <span class="neon-text">Yee</span></h1>
+                <h3 class="text-xl md:text-3xl font-bold mb-6 text-gray-200">
+                    And I am a <span class="neon-text typed-text"></span>
+                </h3>
+                <p class="text-gray-400 mb-8 max-w-lg text-lg leading-relaxed">
+                    I am a 3rd Year CS Student at <span class="text-white font-semibold">UCS Meiktila</span>. 
+                    Passionate about Web Security and Full-Stack development.
+                </p>
+                <div class="flex space-x-8 mb-10 text-3xl neon-text">
+                    <a href="#"><i class="fab fa-linkedin hover:scale-110 transition"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp hover:scale-110 transition"></i></a>
+                    <a href="#"><i class="fab fa-tiktok hover:scale-110 transition"></i></a>
+                </div>
+                <a href="#about" class="neon-btn">More About Me</a>
+            </div>
+            <div class="w-full md:w-2/5 flex justify-center" data-aos="zoom-in">
+                <div class="profile-img-box">
+                    <img src="Images/profile.png" alt="Shwe Yi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="flex justify-center order-2 lg:order-1" data-aos="zoom-in">
+                <div class="profile-img-box">
+                    <img src="Images/profile.png" alt="Shwe Yee">
+                </div>
+            </div>
+            <div data-aos="fade-left" class="order-1 lg:order-2">
+                <h2 class="text-4xl md:text-5xl font-black italic mb-8 uppercase leading-tight">About <span class="neon-text">Shwe Yee_</span></h2>
+                 <div class="space-y-5 text-gray-400 text-[15px] leading-relaxed max-w-xl">
+                    <p>
+                        I am a 3rd Year Computer Science student at the <b class="text-white">University of Computer Studies, Meiktila (UCSMTLA)</b>. 
+                        With a deep passion for <span class="text-white">creative web design</span>, I specialize in building functional and visually compelling digital experiences.
+                    </p>
+                    <p>
+                        Beyond technical coding, I possess <b class="text-white">strong communication skills</b>, allowing me to collaborate effectively in team environments and translate complex ideas into user-friendly solutions.
+                    </p>
+                    <p>
+                        My expertise includes <b class="text-white">Web Security</b> and <b class="text-white">Modern UI/UX</b>. I enjoy solving real-world problems through automation, aiming to become a <span class="neon-text">Full-Stack Developer</span>.
+                    </p>
+                    
+                    <div class="english-badge flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full w-fit">
+                        <i class="fas fa-language neon-text"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-300">English Level: <span class="neon-text">B1 Intermediate</span></span>
+                    </div>
+                </div>
+
+                <div class="mt-12 space-y-8">
+                    <div>
+                        <div class="flex justify-between mb-2 text-[11px] font-black uppercase tracking-widest">
+                            <span>Python & Automation</span><span class="neon-text">95%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-line" style="width: 95%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-[11px] font-black uppercase tracking-widest">
+                            <span>UI/UX Design</span><span class="neon-text">85%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-line" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-black italic uppercase">Technical <span class="neon-text">Expertise_</span></h2>
+            <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.4em]">Swipe or scroll to explore</p>
+        </div>
+
+        <div class="skills-wrapper mb-20" data-aos="fade-up">
+            <div class="skill-card"><i class="fab fa-html5"></i><span class="text-xs font-bold">HTML5</span></div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i><span class="text-xs font-bold">CSS3</span></div>
+            <div class="skill-card"><i class="fab fa-js"></i><span class="text-xs font-bold">JAVASCRIPT</span></div>
+            <div class="skill-card"><i class="fab fa-python"></i><span class="text-xs font-bold">PYTHON</span></div>
+            <div class="skill-card"><i class="fab fa-java"></i><span class="text-xs font-bold">JAVA CORE</span></div>
+            <div class="skill-card"><i class="fas fa-database"></i><span class="text-xs font-bold">MYSQL</span></div>
+            <div class="skill-card"><i class="fab fa-php"></i><span class="text-xs font-bold">PHP</span></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="info-box" data-aos="fade-up">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-user-shield mr-4 text-[#00ffee]"></i> Web Security
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Focusing on protecting data and building secure web infrastructures at <span class="text-white">UCSMTLA</span>.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># SQL_INJECTION_DEF</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># XSS_MITIGATION</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-terminal mr-4 text-[#00ffee]"></i> Tech Ecosystem
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Applying modern technologies across real-world student projects and automation.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># WEATHER_APP</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># SECRET_KEEPER</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-university mr-4 text-[#00ffee]"></i> Education Projects
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Developing University Management Systems and Online Library Management System using J2EE and MySQL.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># J2EE_DEV</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># DATABASE_MGMT</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-comments mr-4 text-[#00ffee]"></i> Professional Skills
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Dedicated to effective teamwork, adaptability, and clear technical communication.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># COLLABORATION</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># ADAPTABILITY</span>
+                </div>
+            </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl md:text-5xl font-black italic uppercase">Latest <span class="neon-text">Projects_</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <img src="Images/university-ss.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                    <i class="fas fa-university text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">University Management</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Secure student management system for UCSMTLA with database architecture.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PHP / MYSQL</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <img src="Images/fh.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                    <i class="fas fa-utensils text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">Food Hub App</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">A dynamic food delivery platform featuring real-time menu filtering.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">HTML / JS / CSS</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <img src="Images/bookstore-ss.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                    <i class="fas fa-book text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">Library System</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Online library management with secure user authentication.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PHP / MYSQL</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <i class="fas fa-microphone text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                    <img src="Images/digitalvoice-ss.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">Digital Voice</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Speech recognition and processing application utilizing JavaScript voice APIs.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">JS / SPEECH API</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <img src="Images/weather-ss.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                    <i class="fas fa-cloud-sun text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">Weather Forecast</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Python-based automation that fetches real-time API data for daily updates.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PYTHON / API</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="500">
+                <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+                    <img src="Images/secret-ss.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500">
+                    <i class="fas fa-user-secret text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+                </div>
+                <div class="px-2 flex-grow">
+                    <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">Secret Keeper</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">Encrypted password manager built with security-first mindset for CS students.</p>
+                </div>
+                <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+                    <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PYTHON / AES</span>
+                    <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+                </div>
+            </div>
+            <div class="project-card p-4 flex flex-col" data-aos="fade-up" data-aos-delay="600">
+    <div class="h-56 rounded-2xl overflow-hidden bg-gray-900 relative group mb-6">
+        <img src="Images/job_portal.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500" alt="IT Portal">
+        <i class="fas fa-briefcase text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#00ffee]/30"></i>
+    </div>
+    <div class="px-2 flex-grow">
+        <h3 class="text-xl font-bold text-[#00ffee] mb-3 uppercase tracking-tight">IT Portal</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            Connect with top tech companies in Myanmar. A dynamic job portal platform discovering roles that match candidate passions and skills.
+        </p>
+    </div>
+    <div class="px-2 pb-2 flex justify-between items-center mt-auto border-t border-white/5 pt-4">
+        <span class="text-[10px] font-black text-gray-500 tracking-widest uppercase">PHP / MYSQL</span>
+        <a href="#" class="text-[#00ffee] text-xs font-bold hover:underline">VIEW CASE</a>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div data-aos="fade-right">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 italic uppercase leading-tight">Let's <span class="neon-text">Connect_</span></h2>
+                <p class="text-gray-400 mb-10 text-lg leading-relaxed">
+                    Have a project in mind or just want to chat about <span class="text-white font-bold">Web Security</span>? Reach out anytime!
+                </p>
+                <div class="space-y-6">
+                    <a href="https://www.linkedin.com/in/shwe-yee-win-5431a4379" target="_blank"class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">LinkedIn</span>
+                    </a>
+                    <a href="" target="_blank"class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">WhatsApp</span>
+                    </a>
+                    <a href="https://tiktok.com/@helenairish2105" target="_blank" class="flex items-center gap-6 group">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-[#00ffee] border border-white/10 group-hover:bg-[#00ffee] group-hover:text-[#080808] transition duration-500 shadow-[0_0_10px_rgba(0,255,238,0.1)]">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </div>
+                        <span class="font-bold text-gray-300 group-hover:text-[#00ffee] transition">TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#111] p-8 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl" data-aos="zoom-in">
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-[#00ffee] mb-3 tracking-widest">Your Name</label>
+                        <input type="text" placeholder="" class="input-field">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-[#00ffee] mb-3 tracking-widest">Email Address</label>
+                        <input type="email" placeholder="" class="input-field">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-[#00ffee] mb-3 tracking-widest">Message</label>
+                        <textarea rows="4" placeholder="" class="input-field"></textarea>
+                    </div>
+                    <button type="submit" class="neon-btn w-full py-4 text-sm uppercase tracking-widest">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 text-gray-600 text-xs">
+        <p>&copy; 2026 Shwe Yee. All rights reserved. <span class="neon-text ml-2">SY_Dev</span></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Typing Effect
+        const typedSpan = document.querySelector(".typed-text");
+        const words = ["CS Student", "Security Enthusiast", "Full-Stack Developer"];
+        let wordIdx = 0, charIdx = 0;
+
+        function type() {
+            if (charIdx < words[wordIdx].length) {
+                typedSpan.textContent += words[wordIdx].charAt(charIdx);
+                charIdx++;
+                setTimeout(type, 100);
+            } else { setTimeout(erase, 2000); }
+        }
+        function erase() {
+            if (charIdx > 0) {
+                typedSpan.textContent = words[wordIdx].substring(0, charIdx - 1);
+                charIdx--;
+                setTimeout(erase, 50);
+            } else { wordIdx = (wordIdx + 1) % words.length; setTimeout(type, 500); }
+        }
+        document.addEventListener("DOMContentLoaded", type);
+    </script>
+</body>
+</html>

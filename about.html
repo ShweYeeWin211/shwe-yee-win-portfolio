@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Shwe Yee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #080808 !important; margin: 0; overflow-x: hidden; }
+        .neon-text { color: #00ffee; text-shadow: 0 0 10px #00ffee; }
+
+        .about-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0; /* Padding ကို အပေါ်အောက်ပဲပေးလိုက်မယ် */
+        }
+
+        .profile-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img-box {
+            position: relative;
+            width: 380px; /* Size ပြန်ညှိထားတယ် */
+            height: 380px;
+            border-radius: 50%;
+            padding: 5px;
+            background: #00ffee;
+            box-shadow: 0 0 40px rgba(0, 255, 238, 0.2);
+        }
+
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #080808;
+        }
+
+        .skill-box { margin-bottom: 1.2rem; }
+
+        /* Screen ကြီးရင် ဘေးတိုက်၊ Screen သေးရင် အပေါ်အောက် */
+        @media (max-width: 1024px) {
+            .profile-img-box { width: 300px; height: 300px; }
+        }
+
+        @media (max-width: 768px) {
+            .about-section { padding-top: 120px; }
+            .profile-img-container { order: -1; margin-bottom: 30px; }
+            .profile-img-box { width: 250px; height: 250px; }
+            .about-text { text-align: center; } /* ဖုန်းနဲ့ဆိုရင် စာကို အလယ်ပို့မယ် */
+            .english-badge { justify-content: center; }
+        }
+    </style>
+</head>
+<body class="bg-[#080808]">
+
+    <header class="fixed w-full py-6 px-10 md:px-20 flex justify-between items-center z-50 bg-[#080808]/90 backdrop-blur-md border-b border-white/5">
+    <a href="index.html" class="text-3xl font-black tracking-tighter group flex items-center">
+        <span class="text-white">SY</span>
+        <span class="neon-text">_Dev</span>
+        <span class="w-1 h-8 bg-[#00ffee] ml-1 animate-pulse shadow-[0_0_10px_#00ffee]"></span>
+    </a>
+
+    <nav class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-white">
+        <a href="index.html" class="neon-text">Home</a>
+        <a href="about.html" class="hover:neon-text transition">About</a>
+        <a href="skills.html" class="hover:neon-text transition">Skills</a>
+        <a href="projects.html" class="hover:neon-text transition">Projects</a>
+        <a href="contact.html" class="hover:neon-text transition">Contact</a>
+    </nav>
+</header>
+
+    <section class="about-section px-6 md:px-20 max-w-[1400px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+            
+            <div data-aos="fade-right" class="about-text">
+                <h2 class="text-4xl md:text-5xl font-black italic mb-6 uppercase leading-tight">About <span class="neon-text">Shwe Yee_</span></h2>
+                
+                <div class="space-y-5 text-gray-400 text-[15px] leading-relaxed max-w-xl">
+                    <p>
+                        I am a 3rd Year Computer Science student at the <b class="text-white">University of Computer Studies, Meiktila (UCSMTLA)</b>. 
+                        With a deep passion for <span class="text-white">creative web design</span>, I specialize in building functional and visually compelling digital experiences.
+                    </p>
+                    <p>
+                        Beyond technical coding, I possess <b class="text-white">strong communication skills</b>, allowing me to collaborate effectively in team environments and translate complex ideas into user-friendly solutions.
+                    </p>
+                    <p>
+                        My expertise includes <b class="text-white">Web Security</b> and <b class="text-white">Modern UI/UX</b>. I enjoy solving real-world problems through automation, aiming to become a <span class="neon-text">Full-Stack Developer</span>.
+                    </p>
+                    
+                    <div class="english-badge flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full w-fit">
+                        <i class="fas fa-language neon-text"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-300">English Level: <span class="neon-text">B1 Intermediate</span></span>
+                    </div>
+                </div>
+                
+                <div class="mt-8 max-w-md">
+                    <div class="skill-box">
+                        <div class="flex justify-between mb-2 text-[10px] font-black uppercase tracking-widest">
+                            <span>Python & Automation</span>
+                            <span class="neon-text">95%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-line" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="flex justify-between mb-2 text-[10px] font-black uppercase tracking-widest">
+                            <span>Professional Communication</span>
+                            <span class="neon-text">85%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-line" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-img-container" data-aos="zoom-in">
+                <div class="profile-img-box">
+                    <img src="Images/profile.png" alt="Shwe Yee">
+                </div>
+            </div>
+
+        </div>
+    </section>
+<footer class="py-10 text-center border-t border-white/5 text-gray-600 text-sm">
+        &copy; 2026 Shwe Yee. All rights reserved. <span class="neon-text">SY_Dev</span>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

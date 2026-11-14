@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise | Shwe Yee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #080808 !important; color: white; overflow-x: hidden; }
+        .neon-text { color: #00ffee; text-shadow: 0 0 10px #00ffee; }
+        
+        .skills-wrapper {
+            display: flex;
+            overflow-x: auto;
+            gap: 40px;
+            padding: 30px 10px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .skills-wrapper::-webkit-scrollbar { height: 5px; }
+        .skills-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 238, 0.3);
+            border-radius: 10px;
+        }
+
+        .skill-card {
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s ease-in-out;
+            min-width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 2rem;
+        }
+
+        .skill-card:hover {
+            border-color: #00ffee;
+            box-shadow: 0 0 30px rgba(0, 255, 238, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .skill-card i { font-size: 3.5rem; color: #00ffee; margin-bottom: 15px; }
+
+        .info-box {
+            background: #111;
+            padding: 2.5rem;
+            border-radius: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            height: 100%;
+            transition: 0.3s;
+        }
+        .info-box:hover { border-top-color: #00ffee; }
+    </style>
+</head>
+<body class="bg-[#080808]">
+
+    <header class="fixed w-full py-6 px-10 md:px-20 flex justify-between items-center z-50 bg-[#080808]/90 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="text-3xl font-black tracking-tighter group flex items-center">
+            <span class="text-white">SY</span>
+            <span class="neon-text">_Dev</span>
+            <span class="w-1 h-8 bg-[#00ffee] ml-1 animate-pulse shadow-[0_0_10px_#00ffee]"></span>
+        </a>
+
+        <nav class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-white">
+            <a href="index.html" class="hover:neon-text transition">Home</a>
+            <a href="about.html" class="hover:neon-text transition">About</a>
+            <a href="skills.html" class="neon-text">Skills</a>
+            <a href="projects.html" class="hover:neon-text transition">Projects</a>
+            <a href="contact.html" class="hover:neon-text transition">Contact</a>
+        </nav>
+    </header>
+
+    <section class="pt-40 pb-20 px-10 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="zoom-in">
+            <h2 class="text-5xl font-black italic uppercase leading-tight">Technical <span class="neon-text">Expertise_</span></h2>
+            <div class="h-1 w-24 bg-[#00ffee] mx-auto mt-4 shadow-[0_0_15px_#00ffee]"></div>
+            <p class="text-gray-500 mt-6 text-sm uppercase tracking-widest">Swipe or scroll icons to see more →</p>
+        </div>
+
+        <div class="skills-wrapper mb-20" data-aos="fade-up">
+            <div class="skill-card"><i class="fab fa-html5"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">HTML5</h4></div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">CSS3</h4></div>
+            <div class="skill-card"><i class="fab fa-js"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">JavaScript</h4></div>
+            <div class="skill-card"><i class="fab fa-python"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">Python</h4></div>
+            <div class="skill-card"><i class="fab fa-java"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">Java Core</h4></div>
+            <div class="skill-card"><i class="fas fa-database"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">MySQL</h4></div>
+            <div class="skill-card"><i class="fas fa-server"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">J2EE</h4></div>
+            <div class="skill-card"><i class="fab fa-php"></i><h4 class="font-bold uppercase tracking-widest text-[11px]">PHP</h4></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="info-box" data-aos="fade-up">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-user-shield mr-4 text-[#00ffee]"></i> Web Security
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Focusing on protecting data and building secure web infrastructures at <span class="text-white">UCSMTLA</span>.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># SQL_INJECTION_DEF</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># XSS_MITIGATION</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-terminal mr-4 text-[#00ffee]"></i> Tech Ecosystem
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Applying modern technologies across real-world student projects and automation.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># WEATHER_APP</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># SECRET_KEEPER</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-university mr-4 text-[#00ffee]"></i> Education Projects
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Developing University Management Systems and Online Library Management System using J2EE and MySQL.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># J2EE_DEV</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># DATABASE_MGMT</span>
+                </div>
+            </div>
+
+            <div class="info-box" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-2xl font-black mb-6 italic flex items-center">
+                    <i class="fas fa-comments mr-4 text-[#00ffee]"></i> Professional Skills
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Dedicated to effective teamwork, adaptability, and clear technical communication.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># COLLABORATION</span>
+                    <span class="text-[9px] font-bold bg-[#00ffee]/10 text-[#00ffee] px-3 py-1 rounded-full border border-[#00ffee]/20"># ADAPTABILITY</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="py-10 text-center border-t border-white/5 text-gray-600 text-sm">
+        &copy; 2026 Shwe Yee. All rights reserved. <span class="neon-text">SY_Dev</span>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
